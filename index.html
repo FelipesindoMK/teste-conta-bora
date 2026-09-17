@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teste — bora@skilliu.org</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Urbanist:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="logo">Skill<em>iu</em> <span class="badge">teste</span></div>
+
+  <!-- TELA 1: CADASTRO -->
+  <section id="screen-cadastro" class="card">
+    <h1>Teste de envio — bora@skilliu.org</h1>
+    <p class="lead">Preenche os dados, confirma se o e-mail chega certinho.</p>
+
+    <input type="text" id="inputNome" placeholder="Nome completo">
+    <input type="email" id="inputEmail" placeholder="E-mail">
+    <input type="text" id="inputInstituicao" placeholder="Instituição / Escola">
+    <input type="text" id="inputProfissao" placeholder="Profissão">
+    <input type="text" id="inputWhatsapp" placeholder="WhatsApp">
+
+    <label class="checkbox-field">
+      <input type="checkbox" id="inputPrivacidade">
+      <span>Aceito receber este e-mail de teste.</span>
+    </label>
+
+    <span class="field-error" id="erroForm"></span>
+    <button class="btn" id="btnEnviar">Enviar cadastro de teste</button>
+  </section>
+
+  <!-- TELA 2: AGUARDANDO E-MAIL -->
+  <section id="screen-aguardando" class="card" hidden>
+    <h1>Confira seu e-mail</h1>
+    <p class="lead">Enviamos um link de confirmação. Clique nele para continuar o teste.</p>
+  </section>
+
+  <!-- TELA 3: PERGUNTAS (chega aqui pelo link do e-mail) -->
+  <section id="screen-perguntas" class="card" hidden>
+    <h1>Só duas perguntinhas</h1>
+    <p class="lead" id="resumoConfirmado"></p>
+
+    <div class="pergunta">
+      <p><strong>1. O e-mail chegou certinho, sem cair no spam?</strong></p>
+      <label><input type="radio" name="p1" value="5"> Sim, perfeito</label>
+      <label><input type="radio" name="p1" value="1"> Não / caiu no spam</label>
+    </div>
+    <div class="pergunta">
+      <p><strong>2. O remetente apareceu como bora@skilliu.org?</strong></p>
+      <label><input type="radio" name="p2" value="5"> Sim</label>
+      <label><input type="radio" name="p2" value="1"> Não</label>
+    </div>
+
+    <span class="field-error" id="erroPerguntas"></span>
+    <button class="btn" id="btnFinalizar">Finalizar teste</button>
+  </section>
+
+  <!-- TELA 4: CONCLUÍDO -->
+  <section id="screen-concluido" class="card" hidden>
+    <h1>✅ Teste concluído</h1>
+    <p class="lead">Resultado salvo na planilha, na mesma linha do cadastro.</p>
+  </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
